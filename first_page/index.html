@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <link rel="stylesheet" href="/assets/styles/carrusel.css">
+    <link rel="stylesheet" href="/assets/styles/side-bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="/assets/images/images.png">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <title>PokeDex</title>
+</head>
+<body>
+    <!-- <button class="settings">Settings</button> -->
+    
+    <div class="MenuToggle"></div>
+        <div class="sidebar">
+            <ul>
+                <li class="logo" style="--bg:#333;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="image-outline"></ion-icon>
+
+                        </div>
+                        <div class="text">Website Logo</div>
+                    </a>
+                </li>
+                <div class="MenuList">
+                    <li style="--bg:#f44336;" class="active">
+                        <a href="index.html">
+                            <div class="icon">
+                                <img src="/assets/images/house.svg" alt="house">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </div>
+                            <div class="text">Home</div>
+                        </a>
+                    </li>
+                    <li style="--bg:#ffa117;" class="active">
+                        <a href="profile.html">
+                            <div class="icon">
+                                <img src="/assets/images/person-circle.svg" alt="profile">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+                            <div class="text">Profile</div>
+                        </a>
+                    </li>
+                    <li style="--bg:#0fc70f;" class="active">
+                        <a href="#">
+                            <div class="icon">
+                                <img src="/assets/images/inbox.svg" alt="inbox">
+                                <ion-icon name="chatbubble-outline"></ion-icon> 
+                            </div>
+                            <div class="text">Inbox</div>
+                        </a>
+                    </li>
+                </div>
+                <div class="bottom">
+                    <li style="--bg::#333">
+                        <a href="#">
+                            <div class="icon">
+                                <div class="imgBx">
+                                    <img src="/assets/images/images.png">
+                                </div>
+                            </div>
+                            <div class="text">PokeDex</div>
+                        </a>
+                    </li>
+                    <li style="--bg:#333"> 
+                        <a href="#">
+                            <div class="icon">
+                                <div class="pokemon">
+                                    <img src="/assets/images/box-arrow-left.svg" alt="logout">
+                                </div>
+                                <ion-icon name="log-out-outline"></ion-icon>
+                            </div>
+                            <div class="text">Logout</div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    <main>
+        <section id="pokemon-section">
+ 
+            <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
+ 
+            <div class="carousel-track" id="carouselTrack">
+ 
+                <!-- PIKACHU -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                    <h3>Pikachu</h3>
+                    <span class="type electric">Electric</span>
+                    <button class="open-btn" onclick="openModal('overlay-pikachu')">Ver más</button>
+                </div>
+ 
+                <!-- CHARMANDER -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
+                    <h3>Charmander</h3>
+                    <span class="type fire">Fire</span>
+                    <button class="open-btn" onclick="openModal('overlay-charmander')">Ver más</button>
+                </div>
+ 
+                <!-- BULBASAUR -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
+                    <h3>Bulbasaur</h3>
+                    <span class="type grass">Grass</span>
+                    <button class="open-btn" onclick="openModal('overlay-bulbasaur')">Ver más</button>
+                </div>
+ 
+                <!-- MEWTWO -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
+                    <h3>Mewtwo</h3>
+                    <span class="type psychic">Psychic</span>
+                    <button class="open-btn" onclick="openModal('overlay-mewtwo')">Ver más</button>
+                </div>
+ 
+                <!-- SQUIRTLE -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle">
+                    <h3>Squirtle</h3>
+                    <span class="type water">Water</span>
+                    <button class="open-btn" onclick="openModal('overlay-squirtle')">Ver más</button>
+                </div>
+ 
+                <!-- GENGAR -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar">
+                    <h3>Gengar</h3>
+                    <span class="type ghost">Ghost</span>
+                    <button class="open-btn" onclick="openModal('overlay-gengar')">Ver más</button>
+                </div>
+ 
+                <!-- EEVEE -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
+                    <h3>Eevee</h3>
+                    <span class="type normal">Normal</span>
+                    <button class="open-btn" onclick="openModal('overlay-eevee')">Ver más</button>
+                </div>
+ 
+                <!-- SNORLAX -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" alt="Snorlax">
+                    <h3>Snorlax</h3>
+                    <span class="type normal">Normal</span>
+                    <button class="open-btn" onclick="openModal('overlay-snorlax')">Ver más</button>
+                </div>
+ 
+                <!-- DRAGONITE -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" alt="Dragonite">
+                    <h3>Dragonite</h3>
+                    <span class="type dragon">Dragon</span>
+                    <button class="open-btn" onclick="openModal('overlay-dragonite')">Ver más</button>
+                </div>
+ 
+            </div>
+ 
+            <button class="carousel-btn next" id="nextBtn">&#8594;</button>
+ 
+            <div class="carousel-dots" id="carouselDots"></div>
+ 
+        </section>
+ 
+        <!-- ── MODALES ── -->
+ 
+        <div id="overlay-pikachu" class="Myoverlay" onclick="closeBackground(event, 'overlay-pikachu')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>⚡ Pikachu</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-pikachu')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu" class="modal-img">
+                    <p><strong>Tipo:</strong> Eléctrico</p>
+                    <p><strong>Altura:</strong> 0.4 m</p>
+                    <p><strong>Peso:</strong> 6 kg</p>
+                    <p><strong>Habilidad:</strong> Static</p>
+                    <p>Pikachu almacena electricidad en sus mejillas y la libera cuando está en peligro.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-pikachu')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div id="overlay-charmander" class="Myoverlay" onclick="closeBackground(event, 'overlay-charmander')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>🔥 Charmander</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-charmander')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander" class="modal-img">
+                    <p><strong>Tipo:</strong> Fuego</p>
+                    <p><strong>Altura:</strong> 0.6 m</p>
+                    <p><strong>Peso:</strong> 8.5 kg</p>
+                    <p><strong>Habilidad:</strong> Blaze</p>
+                    <p>La llama de su cola indica su estado de salud. Si está débil, la llama parpadea.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-charmander')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div id="overlay-bulbasaur" class="Myoverlay" onclick="closeBackground(event, 'overlay-bulbasaur')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>🌿 Bulbasaur</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-bulbasaur')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur" class="modal-img">
+                    <p><strong>Tipo:</strong> Planta / Veneno</p>
+                    <p><strong>Altura:</strong> 0.7 m</p>
+                    <p><strong>Peso:</strong> 6.9 kg</p>
+                    <p><strong>Habilidad:</strong> Overgrow</p>
+                    <p>Nació con una semilla en su espalda que crece junto a él absorbiendo la luz solar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-bulbasaur')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <div id="overlay-mewtwo" class="Myoverlay" onclick="closeBackground(event, 'overlay-mewtwo')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>🌀 Mewtwo</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-mewtwo')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo" class="modal-img">
+                    <p><strong>Tipo:</strong> Psíquico</p>
+                    <p><strong>Altura:</strong> 2.0 m</p>
+                    <p><strong>Peso:</strong> 122 kg</p>
+                    <p><strong>Habilidad:</strong> Pressure</p>
+                    <p>Fue creado por científicos mediante manipulación genética de Mew. Es considerado el Pokémon más poderoso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-mewtwo')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- SQUIRTLE -->
+        <div id="overlay-squirtle" class="Myoverlay" onclick="closeBackground(event, 'overlay-squirtle')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>💧 Squirtle</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-squirtle')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle" class="modal-img">
+                    <p><strong>Tipo:</strong> Agua</p>
+                    <p><strong>Altura:</strong> 0.5 m</p>
+                    <p><strong>Peso:</strong> 9 kg</p>
+                    <p><strong>Habilidad:</strong> Torrent</p>
+                    <p>Cuando retrae su largo cuello dentro de su caparazón, dispara agua a alta presión.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-squirtle')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- GENGAR -->
+        <div id="overlay-gengar" class="Myoverlay" onclick="closeBackground(event, 'overlay-gengar')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>👻 Gengar</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-gengar')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar" class="modal-img">
+                    <p><strong>Tipo:</strong> Fantasma / Veneno</p>
+                    <p><strong>Altura:</strong> 1.5 m</p>
+                    <p><strong>Peso:</strong> 40.5 kg</p>
+                    <p><strong>Habilidad:</strong> Cursed Body</p>
+                    <p>Se esconde en las sombras. Baja la temperatura del lugar donde aparece unos 10 °C.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-gengar')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- EEVEE -->
+        <div id="overlay-eevee" class="Myoverlay" onclick="closeBackground(event, 'overlay-eevee')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>🦊 Eevee</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-eevee')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee" class="modal-img">
+                    <p><strong>Tipo:</strong> Normal</p>
+                    <p><strong>Altura:</strong> 0.3 m</p>
+                    <p><strong>Peso:</strong> 6.5 kg</p>
+                    <p><strong>Habilidad:</strong> Adaptability</p>
+                    <p>Su estructura genética inestable le permite evolucionar en hasta ocho formas distintas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-eevee')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- SNORLAX -->
+        <div id="overlay-snorlax" class="Myoverlay" onclick="closeBackground(event, 'overlay-snorlax')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>😴 Snorlax</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-snorlax')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" alt="Snorlax" class="modal-img">
+                    <p><strong>Tipo:</strong> Normal</p>
+                    <p><strong>Altura:</strong> 2.1 m</p>
+                    <p><strong>Peso:</strong> 460 kg</p>
+                    <p><strong>Habilidad:</strong> Immunity</p>
+                    <p>Come 400 kg de comida al día y luego se duerme. Su estómago es tan resistente que puede digerir cualquier cosa.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-snorlax')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- DRAGONITE -->
+        <div id="overlay-dragonite" class="Myoverlay" onclick="closeBackground(event, 'overlay-dragonite')">
+            <div class="modal-1">
+                <div class="modal-header">
+                    <h2>🐉 Dragonite</h2>
+                    <button class="close-btn" onclick="closeModal('overlay-dragonite')">X</button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" alt="Dragonite" class="modal-img">
+                    <p><strong>Tipo:</strong> Dragón / Volador</p>
+                    <p><strong>Altura:</strong> 2.2 m</p>
+                    <p><strong>Peso:</strong> 210 kg</p>
+                    <p><strong>Habilidad:</strong> Inner Focus</p>
+                    <p>Puede volar a 260 km/h y recorrer el mundo en 16 horas. Se dice que rescata náufragos en el mar.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-footer-btn" onclick="closeModal('overlay-dragonite')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+ 
+    </main>
+    <footer>
+        <p class="rights">&copy; 2026 PokeDex. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Social Networks</a></li>
+        </ul>
+        <ul class="social-links">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

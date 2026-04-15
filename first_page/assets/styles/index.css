@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    --clr: #14161e; /* ✅ Corregido: $ → # */
+}
+
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #F08080;
+}
+
+.logo{
+    size: 1.5rem;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li{
+    margin-left: 20px;
+}
+
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.5s ease;
+}
+
+.nav-items{
+    padding: 12px;
+}
+
+.nav-items:hover{
+    background-color: rgb(126, 123, 123);
+    border-radius: 8px;
+    transition: color 1s ease;
+    background-color: 1s ease;
+} */
+
+.Myoverlay {
+  display: none;          /* oculto por defecto */
+  position: fixed;
+  inset: 0;               /* top/right/bottom/left: 0 */
+  background: rgba(0,0,0,0.45);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.Myoverlay.open {
+  display: flex; /* se vuelve visible */
+}
+
+.open-btn{
+    padding: 9px 22px;
+    background: #185FA5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.modal-1{
+    background: white ;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    padding: 24px;
+}  
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.modal-header h2{
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-btn{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.settings{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+
+.logo{
+    width: auto;
+    height: 30px;
+    padding: auto;
+    border-radius: 6px;
+
+}
+
+/* Grid de tarjetas */
+/* #pokemon-section {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 24px;
+} */
+
+/* Tarjeta individual */
+.pokemon-card {
+    background: #F08080;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 24px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.pokemon-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.pokemon-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Badges de tipo */
+.type {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.electric { background: #F1C40F; color: #333; }
+.fire     { background: #E74C3C; }
+.grass    { background: #27AE60; }
+.psychic  {background:   purple;}
+.water{background: #00BCA1;}
+.ghost{background: #9400D3;}
+.normal{background: #A8A878;}
+.dragon{background: #9400D3;}
+
+/* Imagen dentro del modal */
+.modal-img {
+    width: 140px;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.modal-body p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* Botón cerrar del footer */
+.close-footer-btn {
+    padding: 8px 20px;
+    background: #185FA5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close-footer-btn:hover {
+    background: #134d8a;
+}
+
+footer{
+    background-color: #F08080;
+    color: white;
+    text-align: center;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+}
+
+.footer-links, .social-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.social-links a{
+    color: white;
+    font-size: 24px;
+    transition: opacity 0.2s;
+}
+
+.social-links a:hover{
+    opacity: 0.75;
+}
